@@ -1,0 +1,1367 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e9f4ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full viewport height */
+}
+
+
+/* Header styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #FFF 0%, #F5F5F5 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar {
+    background: #177ed8;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    /* Enables flexbox on contact-info */
+    align-items: center;
+    /* Vertically centers the contact info */
+}
+
+
+
+.contact-info a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.contact-info a:hover {
+    color: white;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 60px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2C3E50;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    /* Even spacing for all items */
+    align-items: center;
+    /* Center items vertically */
+    width: 100%;
+    /* Ensure it spans full width */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.nav-links a {
+    color: #2C3E50;
+    text-decoration: none;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+
+}
+
+
+nav {
+    background-color: #e7f8ff;
+}
+
+/* Ensure dropdown behaves like other items */
+.dropdown {
+    position: relative;
+    color: #177ed8;
+}
+
+/* Regular dropdown without glassy effect */
+/* .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fffffff1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    color: #177ed8;
+} */
+/* Dropdown menu styles */
+.dropdown-menu,
+.properties-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    background: rgba(255, 255, 255, 0.568);
+    /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(20px);
+    /* For Safari */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    color: #177ed8;
+    z-index: 1000;
+    transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show dropdown menu on hover */
+.properties-dropdown:hover .properties-menu {
+    display: block;
+}
+
+/* Styling for menu items */
+.properties-menu li {
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for menu items */
+.properties-menu li:hover {
+    background: rgba(211, 211, 211, 0.5);
+    /* Light gray highlight */
+}
+
+/* Link styles inside the menu */
+.properties-menu a {
+    text-decoration: none;
+    color: #2C3E50;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 10px 20px;
+}
+
+/* Hover effect for links */
+.properties-menu a:hover {
+    color: #177ed8;
+    font-weight: bold;
+}
+
+/* Basic styling for tabs on residential page */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f0f4f8;
+      }
+
+      .tabs-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+
+      .tab-btn {
+        flex: 1;
+        text-align: center;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #61b7db;
+        border: 1px solid #61b7db;
+        border-radius: 15px;
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      }
+
+      .tab-btn:hover {
+        background-color: #1887b6;
+        color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .tab-btn.active {
+        background-color: #1887b6;
+        color: #fff;
+        border: 1px solid #1887b6;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .tab-content {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+      }
+
+      .tab-panel {
+        display: none;
+      }
+
+      .tab-panel.active {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .tabs {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .tab-btn {
+          font-size: 16px;
+          padding: 12px 15px;
+          margin: 5px 0;
+          border-radius: 10px;
+        }
+
+        .tabs-container {
+          padding: 15px;
+          margin: 10px;
+        }
+
+        .tab-content {
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .tab-btn {
+          font-size: 15px;
+          padding: 10px;
+        }
+
+        .tabs-container {
+          padding: 10px;
+          margin: 5px;
+          background-color: aliceblue;
+        }
+      }
+
+/* office carousel */
+    .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .carousel-btn {
+            background: #eee;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .carousel-btn:hover {
+            background: #ccc;
+        }
+        .carousel img {
+            max-width: 1000x;
+            max-height: 500px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+
+
+/* Chelsea Cloisters Carousel Styling */
+.tab-panel {
+  overflow-x: auto;
+}
+
+/* Carousel container with responsive dimensions */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  aspect-ratio: 2 / 1; /* Keeps the 1000x500 aspect ratio */
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Carousel image responsive size */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: rgba(200, 200, 200, 0.9);
+}
+
+/* Button positions */
+#chelseaPrevBtn, #empirePrevBtn, #endsleighPrevBtn, #prevBtn {
+  left: 10px;
+}
+#chelseaNextBtn, #empireNextBtn, #endsleighNextBtn, #nextBtn {
+  right: 10px;
+}
+
+/* Optional: Make buttons smaller on small screens */
+@media (max-width: 600px) {
+  .carousel-btn {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+}
+
+        
+/* Properties dropdown mobile resonsive  */
+/* Mobile styles */
+/* Basic styles for the properties menu on mobile */
+
+
+
+/* Dropdown with glassy effect */
+
+/* code copied to notepad */
+/* end  Dropdown with glassy effect */
+
+
+.nav-links li:hover #dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+.nav-links a.active,.nav-links a:hover,.properties-dropdown:hover > a,
+.properties-dropdown:focus-within > a,
+.properties-dropdown.active > a 
+ {
+    color: #1887b6;
+    border-bottom-color: #1887b6;   
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+
+}
+
+
+
+/* Main content */
+main {
+    padding-top: 120px;
+}
+
+.section {
+    display: none;
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.8s ease;
+}
+
+/* Team members section */
+
+.team-section {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.team-info {
+    margin-top: 10px;
+
+}
+
+
+
+
+.contact-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+
+}
+
+/*Finance page section*/
+
+/* .privacy-section {
+    padding: 40px;
+    text-align: justify;
+} */
+.mb-4,
+.mt-4,
+p {
+    color: #1887b6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Hero section */
+.hero {
+    position: relative;
+    background-image: linear-gradient(rgba(44, 62, 80, 0.3), rgba(44, 62, 80, 0.3)),
+        url('/src/Image/Dean-04Home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -4rem -2rem 4rem -2rem;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, #F9F9F9, transparent);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1000px;
+    padding: 4rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #FFF;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #FFF;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Section styles */
+h2,
+.section-title {
+    text-align: center;
+    color: #646464;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #646464;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+
+
+.section-description {
+    text-align: center;
+    color: #505152;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.role-description {
+    text-align: justify;
+    color: #505152;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #505152;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+/* Grid layouts */
+.content-grid,
+.properties-grid,
+.team-grid,
+.documents-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Feature boxes */
+.feature-box {
+    background: #FFF;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.feature-box h2 {
+    padding: 2rem 2rem 1rem;
+    color: #2C3E50;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.feature-box p {
+    padding: 0 2rem 2rem;
+    color: #7F8C8D;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Property cards */
+.property-card {
+    background: #FFF;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.property-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.property-details {
+    padding: 2rem;
+}
+
+.property-details h3 {
+    color: #646464;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.property-details p {
+    color: #7F8C8D;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.view-details {
+    background: #61b7db;
+    color: #FFF;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.view-details:hover {
+    background: #1887b6;
+    transform: translateY(-2px);
+}
+
+/* Team members */
+ /* .team-member {
+    background: #FFF;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 2rem;
+    color: #2C3E50;
+    font-size: 1.8rem;
+    padding: 0 1.5rem;
+    font-weight: 600;
+}
+
+.team-member p {
+    color: #7F8C8D;
+    margin: 0.5rem 0;
+    font-family: 'Montserrat', sans-serif;
+}  */
+
+/* Container for each team card in the carousel */
+.owl-carousel .team-card {
+    background: #FFF;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    height: 300px; /* Adjust height */
+    width: 100%; /* Allow the card to take full available width */
+    max-width: 350px; /* Limit the max width of the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Ensure owl-carousel items are responsive */
+  .owl-carousel .item {
+    display: flex;
+    justify-content: center; /* Center the team card */
+    align-items: center;
+  }
+  
+  /* Styling for the team photo inside the card */
+  .owl-carousel .team-card img {
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the description text */
+  .team-desc {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+    flex-grow: 1;
+  }
+  
+  /* Layout for name, position, and photo */
+  .team-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Wrapper for the profile photo */
+  .team-photo-wrapper {
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  
+  /* Styling for the profile information (name and position) */
+  .team-info h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .team-info p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 200;
+    color: #777;
+    font-style: italic;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    text-align: justify;
+    white-space: normal;
+  }
+  
+  /* Hover effect for team card */
+  .team-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+  
+  /* Make sure owl-carousel is responsive */
+  .owl-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Owl-carousel responsive breakpoints */
+  .owl-carousel .owl-item {
+    width: 100%; /* Full width by default */
+  }
+  
+  /* Small screens (mobile) */
+  @media (max-width: 600px) {
+    .owl-carousel .owl-item {
+      width: 100%; /* Stack cards on small screens */
+    }
+  }
+  
+  /* Medium screens (tablets) */
+  @media (min-width: 600px) and (max-width: 1000px) {
+    .owl-carousel .owl-item {
+      width: 48%; /* Two cards per row */
+    }
+  }
+  
+  /* Large screens (desktop) */
+  @media (min-width: 1000px) {
+    .owl-carousel .owl-item {
+      width: 32%; /* Three cards per row */
+    }
+  }
+  
+
+.contact-link {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: #61b7db;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 1.5rem 0 2rem;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.contact-link:hover {
+    background: #1887b6;
+    transform: translateY(-2px);
+}
+
+/* Financial section */
+.document-card {
+    background: #61b7db;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #2C3E50;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.document-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.document-card h3 {
+    color: #f6f8fa;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.document-card p {
+    color: #fdfdfd;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contact section */
+.office-info {
+    background: #FFF;
+    padding: 3rem;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    line-height: 1px;
+}
+
+.office-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.office-info h4 {
+    color: #646464;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+.office-info p {
+    margin-bottom: 1rem;
+    color: #7F8C8D;
+    font-family: 'Montserrat', sans-serif;
+    white-space: none;
+}
+
+/* Document Section Styling on contacts page*/
+.documents-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h3 {
+    color: #646464;
+}
+
+/* Document Buttons - 5 Column Grid */
+
+.document-links {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: stretch;
+    /* Make all buttons equal height */
+    flex-wrap: wrap;
+    /* Wrap items if the screen is small */
+    gap: 15px;
+    /* Space between buttons */
+}
+
+
+/* Button Styling */
+.doc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5ca9d6;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s ease;
+    width: 400px;
+    /* Ensures uniform width */
+    height: 60px;
+    /* Ensures uniform height */
+    min-height: 60px;
+    /* Prevents shrinking */
+    text-align: left;
+    white-space: nowrap;
+}
+
+.doc-btn:hover {
+    background: #1887b6;
+}
+
+/* Responsive Design on contact page */
+@media (max-width: 768px) {
+    .document-links {
+        flex-direction: column;
+        /* Stack buttons vertically on smaller screens */
+        align-items: center;
+    }
+
+    .doc-btn {
+        width: 80%;
+        /* Make buttons full width but leave some margin */
+        max-width: auto;
+        height: auto;
+        /* Allow natural height for long text */
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .document-links {
+        grid-template-columns: repeat(1, 1fr);
+        /* Stack buttons in 1 column on mobile */
+    }
+}
+
+
+
+/* Footer styles */
+footer {
+    background-color: #1887b6;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    margin-top: auto;
+    /* Pushes the footer to the bottom */
+    text-align: right;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    flex-wrap: wrap; /* Ensures wrapping for small screens */
+    text-align: center; /* Aligns text properly */
+    padding: 10px 20px;
+}
+
+.contact-info, .footer-links {
+    display: flex;
+    gap: 15px;
+    align-items: center; /* Ensures links align properly */
+}
+
+.footer-link {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info, .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFF;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links a.active {
+        background-color: #1887b6;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold !important;
+    }
+ 
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content {
+        padding: 2rem;
+    }
+
+    /* Flexbox to align contact info and copyright text */
+    .contact-info {
+        display: flex;
+        /* Enables flexbox */
+        justify-content: space-between;
+        /* Distributes space between the left and right elements */
+        align-items: center;
+        /* Vertically centers the items */
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    /* Styling for the contact info links */
+    .contact-info a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .contact-info a:hover {
+        color: #1887b6;
+        /* Hover effect for links */
+    }
+
+    /* Align the copyright text to the right */
+    .contact-info p {
+        margin: 0;
+        text-align: right;
+        /* Aligns the copyright text to the right */
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+
+    }
+
+    .contact-item {
+        white-space: nowrap;
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .contact-item:hover {
+        text-decoration: underline;
+    }
+
+    /* Reset some styles */
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        /* Center items horizontally */
+        align-items: center;
+        /* Align items vertically */
+        gap: 20px;
+        /* Space between links */
+    }
+
+    .nav-links li {
+        position: relative;
+    }
+
+
+
+    @media (max-width: 480px) {
+        .section {
+            padding: 3rem 1.5rem;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            text-align: center;
+            gap: 5px;
+        }
+
+        .contact-item {
+            font-size: 14px;
+        }
+
+        .content-grid,
+        .properties-grid,
+        .team-grid,
+        .documents-grid,
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-content {
+            padding: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+
+    /* Mobile Navigation - Hide by Default */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            /* Hide menu on page load */
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #e9e9e9;
+            padding: 1.5rem 0;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .nav-links.show {
+            display: flex;
+            /* Show menu when toggled */
+        }
+
+        /* Ensure dropdown is hidden by default */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: rgb(239, 240, 240);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Show dropdown on hover for desktops */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+
+        }
+
+        /* Style for mobile menu dropdown */
+        .dropdown-menu.show {
+            display: block;
+
+        }
+
+        @media (max-width: 1024px) {
+            .document-links {
+                justify-content: center;
+            }
+
+            .doc-btn {
+                width: 300px;
+                /* Adjust width for tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .doc-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #5ca9d6;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                transition: 0.3s ease;
+                width: 400px;
+                /* Fixed width for desktop */
+                min-height: 60px;
+                /* Ensures a base height */
+                height: auto;
+                /* Allows the height to expand if needed */
+                width: 95%;
+                /* ✅ Fix Word Wrapping */
+                white-space: normal !important;
+                /* Allows text wrapping */
+                word-wrap: break-word !important;
+                /* Ensures long words break */
+                overflow-wrap: break-word !important;
+                /* Extra safeguard */
+                text-align: center;
+
+                /* Ensure proper padding */
+                padding: 10px 15px;
+            }
+
+            .office-info {
+                text-align: center;
+                max-width: 90%;
+                margin: auto;
+                padding: 1rem;
+                font-size: 1rem;
+                line-height: 1.6;
+                word-wrap: break-word;
+            }
+
+            .office-info p {
+                margin: 0.5rem 0;
+                line-height: 1.5;
+                word-spacing: normal;
+                /* Ensures normal spacing */
+                white-space: normal;
+                /* Prevents excessive gaps */
+                display: block;
+                /* Ensures proper text wrapping */
+                text-align: left;
+            }
+
+        }
+
+    }
+}
