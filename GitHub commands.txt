@@ -1,0 +1,4 @@
+Open terminal
+Git add .
+git commit -m 'summary of changes'
+git push
