@@ -486,11 +486,13 @@ main {
   }
   
   .team-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
   
   .team-photo-wrapper {
     flex-shrink: 0;
@@ -511,6 +513,15 @@ main {
     color: #2C3E50;
   }
   
+  
+.team-info {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fafbfc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 24px 20px;
+  margin-bottom: 16px;
+}
 
   .team-desc {
     font-family: 'Montserrat', sans-serif !important;
