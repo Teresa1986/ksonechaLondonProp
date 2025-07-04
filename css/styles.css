@@ -525,6 +525,18 @@ main {
   
   h4{
     text-align: left;
+font-style: normal;
+font-weight: normal;
+color: #0ba8e6;
+
+  }
+  
+  .contact{
+    text-align: center;
+font-style: normal;
+font-weight: normal;
+color: #0ba8e6;
+
   }
 
 
